@@ -33,10 +33,9 @@ public class WebClientCustomOptionInjection {
   void test(Vertx vertx, VertxTestContext testContext, WebClient client) {
     vertx.createHttpServer().requestHandler(req -> {
       req.response().end();
-      testContext.completeNow();
-    }).listen(9001, h -> {
-      client.get("/bla").send(testContext.succeeding());
-    });
+    }).listen(9001, testContext.succeeding(httpServer -> {
+      client.get("/bla").send(testContext.completing());
+    }));
   }
 
 }
