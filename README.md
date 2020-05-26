@@ -1,4 +1,18 @@
+![CI](https://github.com/reactiverse/reactiverse-junit5-extensions/workflows/CI/badge.svg)
+
 # Reactiverse Vert.x JUnit 5 integration extensions
+
+This project contains a set of extensions for writing JUnit 5 tests.
+
+We currently offer:
+
+- `reactiverse-junit5-web-client`: support for the Vert.x `WebClient`
+  - `reactiverse-junit5-web-client-rx-java` (RxJava bindings)
+  - `reactiverse-junit5-web-client-rx-java2` (RxJava2 bindings)
+
+The Maven `groupId` is `io.reactiverse` and the version matches those of Vert.x upstream.
+
+Snapshots and releases are being pushed to Maven Central.
 
 ## License
 
