@@ -11,18 +11,14 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        java: [ 8, 11 ]
-
     steps:
     - uses: actions/checkout@v2
-    - name: Set up JDK ${{ matrix.java }}
+    - name: Set up JDK
       uses: actions/setup-java@v1
       with:
-        java-version: ${{ matrix.java }}
+        java-version: 8
     - name: Build with Maven
-      run: mvn -U -B package --file pom.xml
+      run: mvn -B clean install --file pom.xml
     - name: Deploy with Maven
       run: mvn deploy
       env:
