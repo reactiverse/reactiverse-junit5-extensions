@@ -23,7 +23,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B clean install --file pom.xml
     - name: Deploy with Maven
-      run: mvn -B deploy
+      run: mvn -B deploy -DskipTests=true
       env:
         MAVEN_USERNAME: ${{ secrets.SONATYPE_USER }}
         MAVEN_PASSWORD: ${{ secrets.SONATYPE_PWD }}
