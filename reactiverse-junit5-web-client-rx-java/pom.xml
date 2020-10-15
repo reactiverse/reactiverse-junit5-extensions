@@ -45,7 +45,6 @@
     <dependency>
       <groupId>io.vertx</groupId>
       <artifactId>vertx-junit5-rx-java</artifactId>
-      <version>${project.version}</version>
     </dependency>
   </dependencies>
 
