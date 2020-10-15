@@ -10,9 +10,21 @@ We currently offer:
   - `reactiverse-junit5-web-client-rx-java` (RxJava bindings)
   - `reactiverse-junit5-web-client-rx-java2` (RxJava2 bindings)
 
-The Maven `groupId` is `io.reactiverse` and the version matches those of Vert.x upstream.
+To start using it, add the following dependencies:
 
-Snapshots and releases are being pushed to Maven Central.
+```
+<!-- Core dependency to the Vert.x JUnit5 integration library -->
+<dependency>
+  <groupId>io.vertx</groupId>
+  <artifactId>vertx-junit5</artifactId>
+</dependency>
+<!-- Vert.x Web Client extension -->
+<dependency>
+  <groupId>io.reactiverse</groupId>
+  <artifactId>reactiverse-junit5-web-client</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+</dependency>
+```
 
 ## License
 
