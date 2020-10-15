@@ -22,7 +22,7 @@
   <parent>
     <artifactId>reactiverse-junit5-extensions-parent</artifactId>
     <groupId>io.reactiverse</groupId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>0.1.0</version>
   </parent>
 
   <artifactId>reactiverse-junit5-rx-java2-web-client</artifactId>
