@@ -31,9 +31,8 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 8
-          settings-path: ${{ github.workspace }}
       - name: Publish to Apache Maven Central
-        run: mvn clean deploy -Drelease -s $GITHUB_WORKSPACE/settings.xml -DskipTests -B
+        run: mvn clean deploy -Drelease --settings $GITHUB_WORKSPACE/settings.xml -DskipTests -B
         env:
           SONATYPE_USER: ${{ secrets.SONATYPE_USER }}
           SONATYPE_PWD: ${{ secrets.SONATYPE_PWD }}
