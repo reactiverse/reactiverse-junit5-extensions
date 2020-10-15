@@ -145,10 +145,10 @@
       <id>ossrh</id>
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
-
     <repository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      <id>bintray-reactiverse-reactiverse-junit5-extensions</id>
+      <name>reactiverse-reactiverse-junit5-extensions</name>
+      <url>https://api.bintray.com/maven/reactiverse/reactiverse-junit5-extensions/${project.artifactId}/;publish=1</url>
     </repository>
   </distributionManagement>
 

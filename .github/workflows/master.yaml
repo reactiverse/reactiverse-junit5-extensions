@@ -31,12 +31,12 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 8
-          server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
-          server-username: MAVEN_USERNAME # env variable for username in deploy
-          server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
+          settings-path: ${{ github.workspace }}
       - name: Publish to Apache Maven Central
-        run: mvn clean deploy -Drelease -DskipTests -B
+        run: mvn clean deploy -Drelease -s $GITHUB_WORKSPACE/settings.xml -DskipTests -B
         env:
-          MAVEN_USERNAME: ${{ secrets.SONATYPE_USER }}
-          MAVEN_CENTRAL_TOKEN: ${{ secrets.SONATYPE_PWD }}
+          SONATYPE_USER: ${{ secrets.SONATYPE_USER }}
+          SONATYPE_PWD: ${{ secrets.SONATYPE_PWD }}
+          BINTRAY_USER: ${{ secrets.BINTRAY_USER }}
+          BINTRAY_PWD: ${{ secrets.BINTRAY_PWD }}
 
