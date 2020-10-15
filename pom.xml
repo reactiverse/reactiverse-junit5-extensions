@@ -107,23 +107,10 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
-          <version>2.2.1</version>
+          <version>3.2.0</version>
           <executions>
             <execution>
               <id>attach-sources</id>
-              <goals>
-                <goal>jar-no-fork</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-javadoc-plugin</artifactId>
-          <version>2.9.1</version>
-          <executions>
-            <execution>
-              <id>attach-javadocs</id>
               <goals>
                 <goal>jar</goal>
               </goals>
@@ -146,9 +133,9 @@
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
     <repository>
-      <id>bintray-reactiverse-reactiverse-junit5-extensions</id>
-      <name>reactiverse-reactiverse-junit5-extensions</name>
-      <url>https://api.bintray.com/maven/reactiverse/reactiverse-junit5-extensions/${project.artifactId}/;publish=1</url>
+      <id>bintray-reactiverse-releases</id>
+      <name>reactiverse-releases</name>
+      <url>https://api.bintray.com/maven/reactiverse/releases/reactiverse-junit5-extensions/;publish=1;override=1</url>
     </repository>
   </distributionManagement>
 

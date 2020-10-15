@@ -12,7 +12,7 @@ We currently offer:
 
 To start using it, add the following dependencies:
 
-```
+```xml
 <!-- Core dependency to the Vert.x JUnit5 integration library -->
 <dependency>
   <groupId>io.vertx</groupId>
