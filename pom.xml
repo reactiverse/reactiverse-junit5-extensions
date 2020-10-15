@@ -22,20 +22,48 @@
   <parent>
     <groupId>io.vertx</groupId>
     <artifactId>vertx-ext-parent</artifactId>
-    <version>34</version>
+    <version>37</version>
   </parent>
-
-  <modules>
-    <module>reactiverse-junit5-web-client</module>
-    <module>reactiverse-junit5-web-client-rx-java</module>
-    <module>reactiverse-junit5-web-client-rx-java2</module>
-  </modules>
 
   <groupId>io.reactiverse</groupId>
   <artifactId>reactiverse-junit5-extensions-parent</artifactId>
   <version>0.2.0-SNAPSHOT</version>
 
   <name>Reactiverse Vert.x JUnit 5 support extensions :: Parent</name>
+  <url>https://reactiverse.io/reactiverse-junit5-extensions/</url>
+  <description>Reactiverse Vert.x JUnit 5 support extensions</description>
+
+  <scm>
+    <connection>scm:git:git://github.com/reactiverse/reactiverse-junit5-extensions.git</connection>
+    <developerConnection>scm:git:git@github.com:reactiverse/reactiverse-junit5-extensions.git</developerConnection>
+    <url>https://reactiverse.io/reactiverse-junit5-extensions/</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>slinkydeveloper</id>
+      <name>Francesco Guardiani</name>
+    </developer>
+    <developer>
+      <id>jponge</id>
+      <name>Julien Ponge</name>
+    </developer>
+  </developers>
+
+  <modules>
+    <module>reactiverse-junit5-web-client</module>
+    <module>reactiverse-junit5-web-client-rx-java</module>
+    <module>reactiverse-junit5-web-client-rx-java2</module>
+  </modules>
 
   <properties>
     <doc.skip>true</doc.skip>
@@ -106,14 +134,29 @@
       <plugins>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-source-plugin</artifactId>
+          <artifactId>maven-javadoc-plugin</artifactId>
           <version>3.2.0</version>
+          <configuration>
+            <destDir>${project.build.directory}/javadoc</destDir>
+            <sourceFileIncludes>
+              <sourceFileInclude>io/reactiverse/**/*.java</sourceFileInclude>
+            </sourceFileIncludes>
+            <detectLinks />
+            <detectJavaApiLink />
+            <links>
+              <!-- This will work when vert.x 4 will be released -->
+              <!--<link>https://vertx.io/docs/${stack.version}/apidocs/</link>-->
+              <link>http://reactivex.io/RxJava/1.x/javadoc/</link>
+              <link>http://reactivex.io/RxJava/javadoc/</link>
+            </links>
+            <doclint>none</doclint>
+          </configuration>
           <executions>
             <execution>
-              <id>attach-sources</id>
               <goals>
                 <goal>jar</goal>
               </goals>
+              <phase>package</phase>
             </execution>
           </executions>
         </plugin>
