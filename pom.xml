@@ -27,7 +27,7 @@
 
   <groupId>io.reactiverse</groupId>
   <artifactId>reactiverse-junit5-extensions-parent</artifactId>
-  <version>0.3.0</version>
+  <version>0.4.0-SNAPSHOT</version>
 
   <name>Reactiverse Vert.x JUnit 5 support extensions :: Parent</name>
   <url>https://reactiverse.io/reactiverse-junit5-extensions/</url>
