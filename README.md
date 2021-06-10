@@ -9,6 +9,7 @@ We currently offer:
 - `reactiverse-junit5-web-client`: support for injecting the Vert.x `WebClient` and assertions using `TestRequest`
   - `reactiverse-junit5-web-client-rx-java` (RxJava bindings)
   - `reactiverse-junit5-web-client-rx-java2` (RxJava2 bindings)
+  - `reactiverse-junit5-web-client-rx-java3` (RxJava3 bindings)
 
 ## Web Client assertions
 
