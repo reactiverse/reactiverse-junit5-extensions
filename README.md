@@ -25,7 +25,7 @@ To start using it, add the following dependencies:
 <dependency>
   <groupId>io.reactiverse</groupId>
   <artifactId>reactiverse-junit5-web-client</artifactId>
-  <version>0.3.0</version>
+  <version>0.4.0</version>
 </dependency>
 ```
 
