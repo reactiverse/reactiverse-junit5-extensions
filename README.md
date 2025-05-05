@@ -1,4 +1,4 @@
-![CI](https://github.com/reactiverse/reactiverse-junit5-extensions/workflows/CI/badge.svg)
+**THIS PROJECT IS NO LONGER MAINTAINED**
 
 # Reactiverse Vert.x JUnit 5 integration extensions
 
